@@ -1,0 +1,7 @@
+{
+  "name": "heystack",
+  "version": "1.0",
+  "dependencies": {
+    "bootstrap": "^4.1.3"
+  }
+}
