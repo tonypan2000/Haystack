@@ -79,3 +79,13 @@
     width: 2em;
     z-index: 1;
 }
+
+.btn-google {
+  color: white;
+  background-color: #ea4335;
+}
+
+.btn-linkedin {
+  color: white;
+  background-color: #3b5998;
+}
