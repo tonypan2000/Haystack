@@ -7,7 +7,12 @@ if(count($_POST)>0) {
 	if($count==0) {
 		$message = "Invalid email address or password.";
 	} else {
-		$message = "";
+        if (mysqli_fetch_assoc($result)['type'] == 1){
+		    header('Location: student_home.html');
+        } else {
+            header('Location: researcher_home.html');
+        }
+        $message = '';
 	}
 }
 ?>
@@ -28,7 +33,7 @@ if(count($_POST)>0) {
             <a class="py-2 d-none d-md-inline-block text-light" href="index.html"><img src="logo.png" alt="HAYSTACK" width="180" height="26"></a>
             <a class="py-2 d-none d-md-inline-block text-light" href="researcher.html">For Researchers</a>
             <a class="py-2 d-none d-md-inline-block text-light" href="student.html">For Students</a>
-            <a class="py-2 d-none d-md-inline-block text-light" href="login.html">Login</a>
+            <a class="py-2 d-none d-md-inline-block text-light" href="login.php">Login</a>
             <a class="py-2 d-none d-md-inline-block btn btn-dark" href="signup.html">Sign Up</a>
         </div>
     </nav>
