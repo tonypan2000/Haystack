@@ -1,73 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="google-signin-client_id" content="796325909617-kh08o4a9o04gc5i1tkvmudgvheq1esj7.apps.googleusercontent.com">
-  <title>Researcher Profile | Haystack</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="icon.jpg" type="image/x-icon">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8">
+    <meta name="google-signin-client_id" content="796325909617-kh08o4a9o04gc5i1tkvmudgvheq1esj7.apps.googleusercontent.com">
+    <title>Researcher Profile | Haystack</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-light">
-  <nav class="site-header sticky-top py-1">
-    <div class="container d-flex flex-column flex-md-row justify-content-between">
-      <a class="py-2 d-none d-md-inline-block text-light" href="index.html"><img src="logo.png" alt="HAYSTACK" width="180" height="26"></a>
-      <a class="py-2 d-none d-md-inline-block text-light" href="researcher.html">For Researchers</a>
-      <a class="py-2 d-none d-md-inline-block text-light" href="student.html">For Students</a>
-      <a class="py-2 d-none d-md-inline-block text-light" href="login.html">Login</a>
-      <a class="py-2 d-none d-md-inline-block btn btn-dark" href="signup.html">Sign Up</a>
-    </div>
-  </nav>
-  <div class="position-relative overflow-hidden m-md-3 text-center text-dark">
-    <h1 class="display-4 font-weight-normal">Build your Profile</h1>
-    <div class="col-sm-6 mobile-pull mx-auto">
-      <h3> Researcher </h3>
-      <div class="input-group mb-3">
-        <select id="inputGroupSelect01" class="selectpicker" data-live-search="true" multiple title="Institution Departments" data-actions-box="true" data-style="btn-primary" data-size="4">
-          <option value="1">EECS</option>
-          <option value="2">LSA</option>
-          <option value="3">Engineering</option>
-          <option value="4">Physics</option>
-        </select>
-      </div>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="inputGroupSelect01">Field of Research</label>
+    <nav class="site-header sticky-top py-1">
+        <div class="container d-flex flex-column flex-md-row justify-content-between">
+            <a class="py-2 d-none d-md-inline-block text-light" href="index.html"><img src="logo.png" alt="HAYSTACK" width="180" height="26"></a>
+            <a class="py-2 d-none d-md-inline-block text-light" href="researcher.html">For Researchers</a>
+            <a class="py-2 d-none d-md-inline-block text-light" href="student.html">For Students</a>
+            <a class="py-2 d-none d-md-inline-block text-light" href="login.html">Login</a>
+            <a class="py-2 d-none d-md-inline-block btn btn-dark" href="signup.html">Sign Up</a>
         </div>
-        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
-      </div>
-      <div class="input-group mb-3">
-        <div class="input-group-prepend">
-          <label class="input-group-text" for="inputGroupSelect01">Publications</label>
+    </nav>
+    <div class="position-relative overflow-hidden m-md-3 text-center text-dark">
+        <h1 class="display-4 font-weight-normal">Build your Profile</h1>
+        <div class="col-sm-6 mobile-pull mx-auto">
+            <h3> Researcher </h3>
+            <div class="input-group mb-3">
+                <select id="inputGroupSelect01" class="selectpicker" data-live-search="true" multiple title="Institution Departments" data-actions-box="true" data-style="btn-primary" data-size="4" data-width="100%">
+                    <option value="1">EECS</option>
+                    <option value="2">LSA</option>
+                    <option value="3">Engineering</option>
+                    <option value="4">Physics</option>
+                </select>
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Field of Research</label>
+                </div>
+                <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Publications</label>
+                </div>
+                <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
+            </div>
         </div>
-        <input type="text" class="form-control" placeholder="" aria-label="" aria-describedby="basic-addon1">
-      </div>
+        <a class="btn btn-lg btn-success" href="#">Save profile</a>
+        <br /> <br /> <br />
+        <a class="btn btn-outline-warning btn-lg" href="researcher_post.html">Post</a>
     </div>
-    <a class="btn btn-lg btn-success" href="#">Save profile</a>
-    <br /> <br /> <br />
-    <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-      <a type="button" class="btn btn-secondary" href="researcher_post.html">Post</a>
-      <div class="btn-group" role="group">
-        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        </button>
-        <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-          <a class="dropdown-item" href="researcher_post.html">an opportunity</a>
-          <a class="dropdown-item" href="researcher_post.html">a vacancy</a>
-          <a class="dropdown-item" href="researcher_post.html">a position</a>
-          <a class="dropdown-item" href="researcher_post.html">a job</a>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <footer>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
-    <script>$(document).ready(function(){$('select').selectpicker();});</script>
-  </footer>
+    <footer>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js"></script>
+        <script>$(document).ready(function(){$('select').selectpicker();});</script>
+    </footer>
 </body>
 </html>

@@ -25,29 +25,27 @@
         <h1 class="display-4 font-weight-normal">Search the Haystack</h1>
         <div class="col-sm-6 mobile-pull mx-auto">
             <h3> Filter by: </h3>
-            <div class="row input-group mb-3 text-left">
-                <div class="col-6">
-                    <select id="inputGroupSelect01" class="selectpicker" data-live-search="true" multiple title="Select Subjects" data-actions-box="true" data-style="btn-primary" data-size="4">
-                        <option value="1">Computer Science</option>
-                        <option value="2">Materials Science</option>
-                        <option value="3">Biology</option>
-                        <option value="4">Physics</option>
-                        <option value="5">Machine Learning</option>
-                        <option value="6">Artificial Intelligence</option>
-                        <option value="7">Cognitive Learning</option>
-                        <option value="8">Deep Learning</option>
-                        <option value="9">Computer Vision</option>
-                    </select>
+            <div class="input-group mb-3 text-left">
+                <select class="selectpicker" data-live-search="true" multiple title="Select Subjects" data-actions-box="true" data-style="btn-primary" data-size="3" data-width="100%">
+                    <option value="1">Computer Science</option>
+                    <option value="2">Materials Science</option>
+                    <option value="3">Biology</option>
+                    <option value="4">Physics</option>
+                    <option value="5">Machine Learning</option>
+                    <option value="6">Artificial Intelligence</option>
+                    <option value="7">Cognitive Learning</option>
+                    <option value="8">Deep Learning</option>
+                    <option value="9">Computer Vision</option>
+                </select>
+            </div>
+            <div class="input-group mb-3">
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline1">Unpaid</label>
                 </div>
-                <div class="col-6">
-                    <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadioInline1">Unpaid</label>
-                    </div>
-                    <div class="custom-control custom-radio">
-                        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-                        <label class="custom-control-label" for="customRadioInline2">Paid</label>
-                    </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="customRadioInline2">Paid</label>
                 </div>
             </div>
             <div class="input-group mb-3">
