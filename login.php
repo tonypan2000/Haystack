@@ -34,7 +34,7 @@ if(count($_POST)>0) {
             <a class="py-2 d-none d-md-inline-block text-light" href="researcher.html">For Researchers</a>
             <a class="py-2 d-none d-md-inline-block text-light" href="student.html">For Students</a>
             <a class="py-2 d-none d-md-inline-block text-light" href="login.php">Login</a>
-            <a class="py-2 d-none d-md-inline-block btn btn-dark" href="signup.html">Sign Up</a>
+            <a class="py-2 d-none d-md-inline-block btn btn-dark" href="signup.php">Sign Up</a>
         </div>
     </nav>
     <div class="container">
@@ -58,7 +58,7 @@ if(count($_POST)>0) {
                 <label class="custom-control-label" for="customCheck1">Remember password</label>
               </div>
               <button name="submit" class="btn btn-lg btn-primary btn-block" type="submit">Log In</button>
-              <a class="btn btn-lg btn-dark btn-block" href="signup.html">Sign Up</a>
+              <a class="btn btn-lg btn-dark btn-block" href="signup.php">Sign Up</a>
               <hr class="my-4">
               <button class="btn btn-lg btn-google btn-block" type="submit"><i class="fab fa-google mr-2"></i> Log in with Google</button>
               <button class="btn btn-lg btn-linkedin btn-block" type="submit"><i class="fab fa-linkedin-f mr-2"></i> Log in with LinkedIn</button>
