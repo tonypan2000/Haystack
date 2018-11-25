@@ -12,7 +12,7 @@ if(count($_POST)>0) {
             $sql = "INSERT INTO users (username, password, type) VALUES ('$email', '$password', 1)";
             $result = mysqli_query($conn, $sql);
             header('Location: student_home.html');
-        } else if (isset($_POST['submit'])){
+        } else if (isset($_POST['submit2'])){
             $department = $_POST['department'];
             if(!empty($department)){
                 $sql = "INSERT INTO users (username, password, type) VALUES ('$email', '$password', 2)";
@@ -93,23 +93,53 @@ if(count($_POST)>0) {
                                 <br />
                                 <h3 class="text-center"><i class="fa fa-lock"></i> Student </h3>
                                 <br />
-                                <form class="signup" method="post">
+                                <form class="needs-validation signup" method="post" novalidate>
                                     <div class="form-group">
-                                        <input name="full-name" type="text" class="form-control" placeholder="Full Name">
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="input-group mb-3">
-                                            <input name="email" type="email" class="form-control" placeholder=".EDU Email">
+                                        <input name="full-name" type="text" class="form-control" placeholder="Full Name" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid full name.
+                                        </div>
+                                        <div class="valid-feedback">
+                                            Looks good!
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <input name="school" type="text" class="form-control" placeholder="Specific School">
+                                        <div class="input-group mb-3">
+                                            <input name="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.+-]+\.edu$" type="email" class="form-control" placeholder=".EDU Email" required>
+                                            <div class="invalid-feedback">
+                                                Please provide a valid .EDU email.
+                                            </div>
+                                            <div class="valid-feedback">
+                                                Looks good!
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="form-group">
-                                        <input name="password" type="password" class="form-control" placeholder="Password">
+                                        <input name="school" type="text" class="form-control" placeholder="Specific School" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid school name.
+                                        </div>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
                                     </div>
                                     <div class="form-group">
-                                        <input name="password2" type="password" class="form-control" placeholder="Confirm Password">
+                                        <input id="password1_1" name="password" type="password" class="form-control" placeholder="Password" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid password.
+                                        </div>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="password1_2" name="password2" type="password" class="form-control" placeholder="Confirm Password" data-match="#password1_1" required>
+                                        <div class="invalid-feedback">
+                                            The passwords did not match.
+                                        </div>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <input type="submit" name="submit1" class="btn btn-success btn-block"  value="SUBMIT">
@@ -128,11 +158,11 @@ if(count($_POST)>0) {
                                 <br />
                                 <h3 class="text-center"><i class="fa fa-lock"></i> Researcher</h3>
                                 <br />
-                                <form class="signup" method="post">
+                                <form class="needs-validation signup" method="post" novalidate>
                                     <div class="form-group">
                                         <div class="form-row">
                                             <div class="col-3">
-                                                <select name="title" class="form-control">
+                                                <select name="title" class="form-control" required>
                                                     <option value = "0">Title</option>
                                                     <option value = "1">Prof.</option>
                                                     <option value = "2">Mr.</option>
@@ -140,28 +170,70 @@ if(count($_POST)>0) {
                                                     <option value = "4">Ms.</option>
                                                     <option value = "5">Dr.</option>
                                                 </select>
+                                                <div class="invalid-feedback">
+                                                    Please select a valid title.
+                                                </div>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
                                             </div>
                                             <div class="col-9">
-                                                <input name="full-name" type="text" class="form-control" placeholder="Name">
+                                                <input name="full-name" type="text" class="form-control" placeholder="Name" required>
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid full name.
+                                                </div>
+                                                <div class="valid-feedback">
+                                                    Looks good!
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <div class="input-group mb-3">
-                                            <input name="email" type="email" class="form-control" placeholder=".EDU Email">
+                                            <input name="email" type="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.+-]+\.edu$" class="form-control" placeholder=".EDU Email" required>
+                                            <div class="invalid-feedback">
+                                                Please provide a valid .EDU email.
+                                            </div>
+                                            <div class="valid-feedback">
+                                                Looks good!
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <input name="school" type="text" class="form-control" placeholder="Specific School">
+                                        <input name="school" type="text" class="form-control" placeholder="Specific School" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid school name.
+                                        </div>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
                                     </div>
                                     <div class="form-group">
-                                        <input name="department" type="text" class="form-control" placeholder="Department">
+                                        <input name="department" type="text" class="form-control" placeholder="Department" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid department.
+                                        </div>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
                                     </div>
                                     <div class="form-group">
-                                        <input name="password" type="password" class="form-control" placeholder="Password">
+                                        <input id="password2_1" name="password" type="password" class="form-control" placeholder="Password" required>
+                                        <div class="invalid-feedback">
+                                            Please provide a valid password.
+                                        </div>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
                                     </div>
                                     <div class="form-group">
-                                        <input name="password2" type="password" class="form-control" placeholder="Confirm Password">
+                                        <input id="password2_2" name="password2" type="password" class="form-control" placeholder="Confirm Password" data-match="#password2_1" required>
+                                        <div class="invalid-feedback">
+                                            The passwords did not match.
+                                        </div>
+                                        <div class="valid-feedback">
+                                            Looks good!
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <input type="submit" name="submit2" class="btn btn-success btn-block"  value="SUBMIT">
@@ -173,6 +245,26 @@ if(count($_POST)>0) {
                 </div>
             </div>
         </div>
+        <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+        </script>
     </section>
     <br /><br /><br />
     <footer>
@@ -181,6 +273,7 @@ if(count($_POST)>0) {
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <script src="js/jquery.scrolly.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.js"></script>
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <script>
         $('.scrolly').scrolly({
