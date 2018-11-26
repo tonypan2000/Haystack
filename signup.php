@@ -276,9 +276,25 @@ if(count($_POST)>0) {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.js"></script>
         <script src="https://apis.google.com/js/platform.js" async defer></script>
         <script>
-        $('.scrolly').scrolly({
-            speed: 2000
-        });
+        //override bootstrap
+          $(document).ready(function() {
+            $("#password1_1, #password1_2").change(function() {
+              if($("#password1_1").val() === $("#password1_2").val()) {
+                $("#password1_2")[0].setCustomValidity('');
+              } else {
+                $("#password1_2")[0].setCustomValidity('Passwords do not match');
+              }
+            });
+            $("#password2_1, #password2_2").change(function() {
+              if($("#password2_1").val() === $("#password2_2").val()) {
+                $("#password2_2")[0].setCustomValidity('');
+              } else {
+                $("#password2_2")[0].setCustomValidity('Passwords do not match');
+              }
+            });
+
+            $(".scrolly").scrolly({speed: 500});
+          });
         </script>
     </footer>
 </body>
